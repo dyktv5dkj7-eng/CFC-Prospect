@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IEM Monitor Setup</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px 18px 40px;
+      background: #111;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .brand {
+      text-align: center;
+      margin: 10px 0 30px;
+    }
+
+    .brand img {
+      width: 150px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 30px;
+      line-height: 1.15;
+      margin: 0 0 8px;
+      text-align: center;
+    }
+
+    .subtitle {
+      color: #999;
+      text-align: center;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    .step {
+      background: #1d1d1d;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .step-number {
+      font-size: 13px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin: 6px 0 14px;
+      font-size: 21px;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    .button {
+      display: block;
+      text-align: center;
+      background: #fff;
+      color: #111;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 15px;
+      border-radius: 12px;
+      margin-top: 16px;
+    }
+
+    .button-secondary {
+      background: #444;
+      color: #fff;
+    }
+
+    button {
+      width: 100%;
+      border: none;
+      background: #444;
+      color: #fff;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    button:active,
+    .button:active {
+      transform: scale(0.98);
+    }
+
+    .info {
+      background: #292929;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 12px;
+      font-family: monospace;
+      font-size: 17px;
+    }
+
+    .ip {
+      font-size: 28px;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 1px;
+      padding: 18px 10px;
+    }
+
+    .manual-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-top: 16px;
+      border-radius: 10px;
+    }
+
+    .image-caption {
+      text-align: center;
+      color: #999;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .check {
+      padding: 8px 0;
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      color: #555;
+      font-size: 12px;
+      margin-top: 32px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="brand">
+      <img src="authentic-audio-logo.png" alt="Authentic Audio">
+    </div>
+
+    <h1>IEM Monitor Setup</h1>
+
+    <div class="subtitle">
+      Follow the steps below to connect to the monitor console.
+    </div>
+
+
+    <!-- STEP 1 -->
+    <div class="step">
+
+      <div class="step-number">Step 1</div>
+
+      <h2>Download Wing-Q</h2>
+
+      <p>
+        Install the Wing-Q app on your device.
+      </p>
+
+      <a
+        class="button"
+        href="https://apps.apple.com/au/app/wing-q/id1519012379"
+      >
+         Download for iPhone
+      </a>
+
+      <a
+        class="button button-secondary"
+        href="https://play.google.com/store/apps/details?id=musictribe.q.wapp"
+      >
+        🤖 Download for Android
+      </a>
+
+    </div>
+
+
+    <!-- STEP 2 -->
+    <div class="step">
+
+      <div class="step-number">Step 2</div>
+
+      <h2>Join the Wi-Fi</h2>
+
+      <p>
+        Open <strong>Settings → Wi-Fi</strong> and select the
+        <strong>AA TWO</strong> network.
+      </p>
+
+      <div class="info">
+        <strong>Network</strong><br>
+        AA TWO
+
+        <br><br>
+
+        <strong>Password</strong><br>
+        authentic
+      </div>
+
+      <button onclick="copyPassword()">
+        📋 Copy Wi-Fi Password
+      </button>
+
+      <p style="color:#999;font-size:14px;margin-top:16px;">
+        Tap <strong>AA TWO</strong> in Wi-Fi settings, then paste the password.
+      </p>
+
+    </div>
+
+
+    <!-- STEP 3 -->
+    <div class="step">
+
+      <div class="step-number">Step 3</div>
+
+      <h2>Connect Wing-Q</h2>
+
+      <p>
+        Return to Wing-Q and tap <strong>MANUAL</strong>
+        to enter the console address.
+      </p>
+
+      <img
+        class="manual-image"
+        src="wing-q-manual.png"
+        alt="Wing-Q Manual button"
+      >
+
+      <div class="image-caption">
+        Tap <strong>MANUAL</strong>
+      </div>
+
+      <p style="margin-top:18px;">
+        Enter this IP address:
+      </p>
+
+      <div class="info ip">
+        192.168.8.4
+      </div>
+
+      <button onclick="copyIP()">
+        📋 Copy IP Address
+      </button>
+
+      <p style="margin-top:18px;color:#ccc;">
+        Once the IP address is entered, you should be connected to the console.
+      </p>
+
+    </div>
+
+
+    <!-- CHECK -->
+    <div class="step">
+
+      <div class="step-number">Check</div>
+
+      <div class="check">
+        ✓ Wing-Q installed
+      </div>
+
+      <div class="check">
+        ✓ Connected to AA TWO
+      </div>
+
+      <div class="check">
+        ✓ IP address entered
+      </div>
+
+    </div>
+
+
+    <footer>
+      Authentic Audio
+    </footer>
+
+  </div>
+
+
+  <script>
+
+    function copyPassword() {
+      navigator.clipboard.writeText("authentic");
+      alert("Wi-Fi password copied!");
+    }
+
+    function copyIP() {
+      navigator.clipboard.writeText("192.168.8.4");
+      alert("IP address copied!");
+    }
+
+  </script>
+
+</body>
+</html>
